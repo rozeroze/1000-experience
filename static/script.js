@@ -1,3 +1,4 @@
 (function () {
-  alert('hello world');
+  //alert('hello world');
+  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
 })()
