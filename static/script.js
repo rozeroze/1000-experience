@@ -1,4 +1,7 @@
 (function () {
-  //alert('hello world');
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+  // text-field
+  const textFields = document.querySelectorAll('.mdc-text-field');
+  for (const textField of textFields) {
+    mdc.textField.MDCTextField.attachTo(textField);
+  }
 })()
