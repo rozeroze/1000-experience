@@ -1,7 +1,7 @@
 var current_level;
 var target_level;
 var at_next;
-var stars;
+var get_stars;
 
 (function () {
   // top-app-bar
@@ -19,5 +19,5 @@ var stars;
   at_next = document.querySelector("[name=at-next]");
   
   // radio
-  stars = document.querySelector("[name=stars]");
+  get_stars = () => document.querySelector("[name=stars]:checked");
 })()
