@@ -1,6 +1,7 @@
 var current_level;
 var target_level;
 var at_next;
+var stars;
 
 (function () {
   // top-app-bar
@@ -16,4 +17,7 @@ var at_next;
   current_level = document.querySelector("[name=current-level]");
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
+  
+  // radio
+  stars = document.querySelector("[name=stars]");
 })()
