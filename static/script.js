@@ -25,6 +25,8 @@ var get_target_level;
 var set_target_level;
 var get_at_next;
 var set_at_next;
+var get_necessary_experience;
+var set_necessary_experience;
 
 /*** functions ***/
 var get_stars;
@@ -63,6 +65,8 @@ var get_total_exp_to_target;
       }
     }
     current_level.value = _level;
+    current_level.dispatchEvent(new Event("change"));
+    current_level.dispatchEvent(new Event("blur"));
   };
   get_target_level = () => {
     return target_level.value;
@@ -76,6 +80,8 @@ var get_total_exp_to_target;
       }
     }
     target_level.value = _level;
+    target_level.dispatchEvent(new Event("change"));
+    target_level.dispatchEvent(new Event("blur"));
   };
   get_at_next = () => {
     return at_next.value;
@@ -110,6 +116,4 @@ var get_total_exp_to_target;
   document.querySelector("[name=stars]#" + INITIAL_STARS).click();
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
-  current_level.dispatchEvent(new Event("blur"));
-  target_level.dispatchEvent(new Event("blur"));
 })()
