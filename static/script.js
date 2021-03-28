@@ -31,9 +31,8 @@ var get_necessary_experience;
 var set_necessary_experience;
 
 /*** functions ***/
-var get_max_level;
-var get_at_next_max;
-var get_total_exp_to_target;
+var set_limit_values;
+var set_necessary_experience;
 
 (function () {
   // top-app-bar
@@ -62,7 +61,7 @@ var get_total_exp_to_target;
     elem.click();
   };
   get_current_level = () => {
-    return current_level.value;
+    return parseInt(current_level.value);
   };
   set_current_level = lv => {
     let _level = lv;
@@ -77,7 +76,7 @@ var get_total_exp_to_target;
     current_level.dispatchEvent(new Event("blur"));
   };
   get_target_level = () => {
-    return target_level.value;
+    return parseInt(target_level.value);
   };
   set_target_level = lv => {
     let _level = lv;
@@ -92,7 +91,7 @@ var get_total_exp_to_target;
     target_level.dispatchEvent(new Event("blur"));
   };
   get_at_next = () => {
-    return at_next.value;
+    return parseInt(at_next.value);
   };
   set_at_next = num => {
     let _num = num;
@@ -106,21 +105,36 @@ var get_total_exp_to_target;
   };
 
   // functions
-  get_max_level = () => {
-    return MAX_LEVELS[get_stars()];
-  };
-  get_at_next_max = () => {
+  set_limit_values = () => {
+    // level
     let _star = get_stars();
-    let _current = parseInt(current_level.value);
-    return exp[_star][_current + 1] - exp[_star][_current];
+    let _max_level = MAX_LEVELS[_star];
+    current_level.max = _max_level;
+    target_level.max = _max_level;
+    // at-next
+    let _current = get_current_level();
+    let _at_next = exp[_star][_current + 1] - exp[_star][_current];
+    at_next.max = _at_next;
   };
-  get_total_exp_to_target = () => {
+  set_necessary_experience = () => {
     let _star = get_stars();
-    return exp[_star][target_level.value] - exp[_star][current_level.value];
+    let _current = get_current_level();
+    let _target = get_target_level();
+    let _exp = exp[_star][_target] - exp[_star][_current];
+    necessary_experience.innerText = _exp;
   };
 
   // initial-setting
   set_stars(INITIAL_STARS);
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
+  
+  // set limit
+  current_level.min = 1;
+  target_level.min = 1;
+  at_next.min = 0;
+  set_limit_values();
+  
+  // necessary experience
+  set_necessary_experience();
 })()
