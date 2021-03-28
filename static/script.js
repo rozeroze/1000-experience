@@ -31,7 +31,10 @@ var get_necessary_experience;
 var set_necessary_experience;
 
 /*** functions ***/
-var set_limit_values;
+var get_limit_of_at_next_level;
+var set_limit_of_min_level;
+var set_limit_of_max_level;
+var set_limit_of_at_next;
 var set_necessary_experience;
 
 (function () {
@@ -65,8 +68,8 @@ var set_necessary_experience;
   };
   set_current_level = lv => {
     let _level = lv;
-    let _max = get_max_level();
     if (FLG_LIMIT_VALUE_CORRECTION) {
+      let _max = MAX_LEVELS[get_stars()];
       if (_max < _level) {
         _level = _max;
       }
@@ -80,8 +83,8 @@ var set_necessary_experience;
   };
   set_target_level = lv => {
     let _level = lv;
-    let _max = get_max_level();
     if (FLG_LIMIT_VALUE_CORRECTION) {
+      let _max = MAX_LEVELS[get_stars()];
       if (_max < _level) {
         _level = _max;
       }
@@ -95,26 +98,36 @@ var set_necessary_experience;
   };
   set_at_next = num => {
     let _num = num;
-    let _max = get_at_next_max();
     if (FLG_LIMIT_VALUE_CORRECTION) {
+      let _max = get_limit_of_at_next_level();
       if (_max < _num) {
         _num = _max;
       }
     }
     at_next.value = _num;
+    at_next.dispatchEvent(new Event("change"));
+    at_next.dispatchEvent(new Event("blur"));
   };
 
   // functions
-  set_limit_values = () => {
-    // level
+  get_limit_of_at_next_level = () => {
     let _star = get_stars();
-    let _max_level = MAX_LEVELS[_star];
-    current_level.max = _max_level;
-    target_level.max = _max_level;
-    // at-next
     let _current = get_current_level();
     let _at_next = exp[_star][_current + 1] - exp[_star][_current];
-    at_next.max = _at_next;
+    return _at_next;
+  };
+  set_limit_of_min_level = () => {
+    current_level.min = 1;
+    target_level.min = 1;
+  };
+  set_limit_of_max_level = () => {
+    let _max = MAX_LEVELS[get_stars()];
+    current_level.max = _max;
+    target_level.max = _max;
+  };
+  set_limit_of_at_next = () => {
+    at_next.min = 0;
+    at_next.max = get_limit_of_at_next_level();
   };
   set_necessary_experience = () => {
     let _star = get_stars();
@@ -128,12 +141,12 @@ var set_necessary_experience;
   set_stars(INITIAL_STARS);
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
+  set_at_next(0);
   
   // set limit
-  current_level.min = 1;
-  target_level.min = 1;
-  at_next.min = 0;
-  set_limit_values();
+  set_limit_of_min_level();
+  set_limit_of_max_level();
+  set_limit_of_at_next();
   
   // necessary experience
   set_necessary_experience();
