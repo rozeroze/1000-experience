@@ -12,6 +12,7 @@ const MAX_LEVELS = {
 var current_level;
 var target_level;
 var at_next;
+var necessary_experience;
 
 /*** functions ***/
 var get_stars;
@@ -34,10 +35,11 @@ var get_total_exp_to_target;
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
   
-  // radio
-  get_stars = () => document.querySelector("[name=stars]:checked").id;
+  // plane-text
+  necessary_experience = document.querySelector("div.necessary-experience-count");
   
   // get-value
+  get_stars = () => document.querySelector("[name=stars]:checked").id;
   get_max_level = () => {
     return MAX_LEVELS[get_stars()];
   };
