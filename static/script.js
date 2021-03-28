@@ -23,7 +23,7 @@ var get_at_next_max;
   at_next = document.querySelector("[name=at-next]");
   
   // radio
-  get_stars = () => document.querySelector("[name=stars]:checked");
+  get_stars = () => document.querySelector("[name=stars]:checked").id;
   
   // get-value
   get_at_next_max = () => {
