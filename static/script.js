@@ -110,4 +110,6 @@ var get_total_exp_to_target;
   document.querySelector("[name=stars]#" + INITIAL_STARS).click();
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
+  current_level.dispatchEvent(new Event("blur"));
+  target_level.dispatchEvent(new Event("blur"));
 })()
