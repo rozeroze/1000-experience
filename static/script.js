@@ -144,9 +144,9 @@ var set_necessary_experience;
   set_at_next(0);
   
   // set limit
-  set_limit_of_min_level();
-  set_limit_of_max_level();
-  set_limit_of_at_next();
+  //set_limit_of_min_level();
+  //set_limit_of_max_level();
+  //set_limit_of_at_next();
   
   // necessary experience
   set_necessary_experience();
