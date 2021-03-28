@@ -1,6 +1,8 @@
 /*** settings ***/
 const INITIAL_STARS = "star-3";
-const INITIAL_LEVEL = 1;
+const INITIAL_CURRENT_LEVEL = 1;
+const INITIAL_TARGET_LEVEL = 99;
+const FLG_LIMIT_LEVEL_CORRECTION = true;
 const MAX_LEVELS = {
   "star-1": 30,
   "star-2": 40,
@@ -15,6 +17,14 @@ var current_level;
 var target_level;
 var at_next;
 var necessary_experience;
+
+/*** getter and setter ***/
+var get_current_level;
+var set_current_level;
+var get_target_level;
+var set_target_level;
+var get_at_next;
+var set_at_next;
 
 /*** functions ***/
 var get_stars;
@@ -54,8 +64,29 @@ var get_total_exp_to_target;
     let _star = get_stars();
     return exp[_star][target_level.value] - exp[_star][current_level.value];
   };
-  
+
+  // get-set
+  get_current_level = () => {
+    return current_level.value;
+  };
+  set_current_level = lv => {
+    current_level.value = lv;
+  };
+  get_target_level = () => {
+    return target_level.value;
+  };
+  set_target_level = lv => {
+    target_level.value = lv;
+  };
+  get_at_next = () => {
+    return at_next.value;
+  };
+  set_at_next = num => {
+    at_next.value = num;
+  };
+
   // initial-setting
   document.querySelector("[name=stars]#" + INITIAL_STARS).click();
-  current_level.value = INITIAL_LEVEL;
+  current_level.value = INITIAL_CURRENT_LEVEL;
+  target_level.value = INITIAL_TARGET_LEVEL;
 })()
