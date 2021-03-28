@@ -1,7 +1,11 @@
+/*** properties ***/
 var current_level;
 var target_level;
 var at_next;
+
+/*** functions ***/
 var get_stars;
+var get_at_next_max;
 
 (function () {
   // top-app-bar
@@ -20,4 +24,11 @@ var get_stars;
   
   // radio
   get_stars = () => document.querySelector("[name=stars]:checked");
+  
+  // get-value
+  get_at_next_max = () => {
+    let _s = get_stars;
+    let _c = current_level.value;
+    let _t = target_level.value;
+  };
 })()
