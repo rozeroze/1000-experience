@@ -27,8 +27,6 @@ var get_target_level;
 var set_target_level;
 var get_at_next;
 var set_at_next;
-var get_necessary_experience;
-var set_necessary_experience;
 
 /*** functions ***/
 var get_limit_of_at_next_level;
