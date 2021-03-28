@@ -1,4 +1,6 @@
 /*** settings ***/
+const INITIAL_STARS = "star-3";
+const INITIAL_LEVEL = 1;
 const MAX_LEVELS = {
   "star-1": 30,
   "star-2": 40,
@@ -52,4 +54,8 @@ var get_total_exp_to_target;
     let _star = get_stars();
     return exp[_star][target_level.value] - exp[_star][current_level.value];
   };
+  
+  // initial-setting
+  document.querySelector("[name=stars]#" + INITIAL_STARS).click();
+  current_level.value = INITIAL_LEVEL;
 })()
