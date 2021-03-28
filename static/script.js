@@ -27,8 +27,6 @@ var get_at_next_max;
   
   // get-value
   get_at_next_max = () => {
-    let _s = get_stars;
-    let _c = current_level.value;
-    let _t = target_level.value;
+    return exp[get_stars()][current_level.value];
   };
 })()
