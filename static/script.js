@@ -17,6 +17,7 @@ var at_next;
 var get_stars;
 var get_max_level;
 var get_at_next_max;
+var get_total_exp_to_target;
 
 (function () {
   // top-app-bar
@@ -41,6 +42,11 @@ var get_at_next_max;
     return MAX_LEVELS[get_stars()];
   };
   get_at_next_max = () => {
+    let _star = get_stars();
+    let _current = parseInt(current_level.value);
+    return exp[_star][_current + 1] - exp[_star][_current];
+  };
+  get_total_exp_to_target = () => {
     let _star = get_stars();
     return exp[_star][target_level.value] - exp[_star][current_level.value];
   };
