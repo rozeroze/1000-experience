@@ -19,6 +19,8 @@ var at_next;
 var necessary_experience;
 
 /*** getter and setter ***/
+var get_stars;
+var set_stars;
 var get_current_level;
 var set_current_level;
 var get_target_level;
@@ -29,7 +31,6 @@ var get_necessary_experience;
 var set_necessary_experience;
 
 /*** functions ***/
-var get_stars;
 var get_max_level;
 var get_at_next_max;
 var get_total_exp_to_target;
@@ -53,6 +54,13 @@ var get_total_exp_to_target;
   necessary_experience = document.querySelector("div.necessary-experience-count");
 
   // getter-setter
+  get_stars = () => {
+    return document.querySelector("[name=stars]:checked").id;
+  };
+  set_stars = star => {
+    let elem = document.querySelector("[name=stars]#" + star);
+    elem.click();
+  };
   get_current_level = () => {
     return current_level.value;
   };
@@ -98,7 +106,6 @@ var get_total_exp_to_target;
   };
 
   // functions
-  get_stars = () => document.querySelector("[name=stars]:checked").id;
   get_max_level = () => {
     return MAX_LEVELS[get_stars()];
   };
@@ -113,7 +120,7 @@ var get_total_exp_to_target;
   };
 
   // initial-setting
-  document.querySelector("[name=stars]#" + INITIAL_STARS).click();
+  set_stars(INITIAL_STARS);
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
 })()
