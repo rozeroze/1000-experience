@@ -12,3 +12,9 @@ body { font-family: 'Roboto', sans-serif; }
 a {
   text-decoration: none;
 }
+
+input[name=current-level],
+input[name=target-level],
+input[name=at-next] {
+  width: 200px;
+}
