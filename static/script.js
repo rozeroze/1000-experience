@@ -1,3 +1,13 @@
+/*** settings ***/
+const MAX_LEVELS = {
+  "star-1": 30,
+  "star-2": 40,
+  "star-3": 55,
+  "star-4": 99,
+  "star-5": 99,
+  "star-6": 99
+};
+
 /*** properties ***/
 var current_level;
 var target_level;
@@ -5,6 +15,7 @@ var at_next;
 
 /*** functions ***/
 var get_stars;
+var get_max_level;
 var get_at_next_max;
 
 (function () {
@@ -26,6 +37,9 @@ var get_at_next_max;
   get_stars = () => document.querySelector("[name=stars]:checked").id;
   
   // get-value
+  get_max_level = () => {
+    return MAX_LEVELS[get_stars()];
+  };
   get_at_next_max = () => {
     let _star = get_stars();
     return exp[_star][target_level.value] - exp[_star][current_level.value];
