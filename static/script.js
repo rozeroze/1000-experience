@@ -56,10 +56,12 @@ var set_necessary_experience;
   necessary_experience = document.querySelector("div.necessary-experience-count");
   
   // TEST: button <star>
-  var b1 = document.querySelector("section.button .button-container button");
+  var b1 = document.querySelector("section.button .button-container button:nth-child(1)");
   b1.addEventListener("click", e => {
     set_stars(e.dataset["stars"]);
   });
+  var b2 = document.querySelector("section.button .button-container button:nth-child(2)");
+  b2.onclick = "set_stars('star-2')";
 
   // getter-setter
   get_stars = () => {
