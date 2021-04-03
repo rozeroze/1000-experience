@@ -17,6 +17,10 @@ a {
   margin: 10px;
 }
 
+.test-bg-thin {
+  background-color: #a0a0a0 !important;
+}
+
 input[name=current-level],
 input[name=target-level],
 input[name=at-next] {
