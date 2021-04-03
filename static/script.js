@@ -36,6 +36,9 @@ var set_limit_of_max_level;
 var set_limit_of_at_next;
 var set_necessary_experience;
 
+/*** test ***/
+var btns;
+
 (function () {
   // top-app-bar
   //const topAppBar = new MDCTopAppBar(document.querySelector('.mdc-top-app-bar'));
@@ -56,12 +59,13 @@ var set_necessary_experience;
   necessary_experience = document.querySelector("div.necessary-experience-count");
   
   // TEST: button <star>
-  var b1 = document.querySelector("section.button .button-container button:nth-child(1)");
-  b1.addEventListener("click", e => {
-    set_stars(e.dataset["stars"]);
-  });
-  var b2 = document.querySelector("section.button .button-container button:nth-child(2)");
-  b2.onclick = "set_stars('star-2')";
+  btns = document.querySelectorAll("section.button .button-container button");
+  //var b1 = document.querySelector("section.button .button-container button:nth-child(1)");
+  //b1.addEventListener("click", e => {
+  //  set_stars(e.dataset["stars"]);
+  //});
+  //var b2 = document.querySelector("section.button .button-container button:nth-child(2)");
+  //b2.onclick = "set_stars('star-2')";
 
   // getter-setter
   get_stars = () => {
