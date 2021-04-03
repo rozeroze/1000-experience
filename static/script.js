@@ -54,6 +54,12 @@ var set_necessary_experience;
 
   // plane-text
   necessary_experience = document.querySelector("div.necessary-experience-count");
+  
+  // TEST: button <star>
+  var b1 = document.querySelector("section.button .button-container button");
+  b1.addEventListener("click", e => {
+    set_stars(e.dataset["stars"]);
+  });
 
   // getter-setter
   get_stars = () => {
