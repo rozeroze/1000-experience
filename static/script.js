@@ -64,6 +64,10 @@ var set_necessary_experience;
     //let elem = document.querySelector("[name=stars]#" + star);
     //elem.click();
     star_holder.value = star;
+    document.querySelectorAll("section.button .button-container button").forEach(e => {
+      e.classList.remove("test-bg-thin");
+    });
+    document.querySelector("section.button .button-container button[data-stars='" + star + "']").classList.add("test-bg-thin");
   };
   get_current_level = () => {
     return parseInt(current_level.value);
