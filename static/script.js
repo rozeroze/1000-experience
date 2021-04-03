@@ -13,6 +13,7 @@ const MAX_LEVELS = {
 };
 
 /*** properties ***/
+var star_holder;
 var current_level;
 var target_level;
 var at_next;
@@ -46,6 +47,7 @@ var set_necessary_experience;
   for (const textField of textFields) {
     mdc.textField.MDCTextField.attachTo(textField);
   }
+  star_holder = document.querySelector("#star-holder");
   current_level = document.querySelector("[name=current-level]");
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
@@ -55,11 +57,13 @@ var set_necessary_experience;
 
   // getter-setter
   get_stars = () => {
-    return document.querySelector("[name=stars]:checked").id;
+    //return document.querySelector("[name=stars]:checked").id;
+    return star_holder.value;
   };
   set_stars = star => {
-    let elem = document.querySelector("[name=stars]#" + star);
-    elem.click();
+    //let elem = document.querySelector("[name=stars]#" + star);
+    //elem.click();
+    star_holder.value = star;
   };
   get_current_level = () => {
     return parseInt(current_level.value);
