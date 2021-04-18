@@ -75,6 +75,10 @@ var btns;
       e.classList.add("test-bg-thin");
     });
     document.querySelector("section.button .button-container button[data-stars='" + star + "']").classList.remove("test-bg-thin");
+    set_limit_of_min_level();
+    set_limit_of_max_level();
+    set_limit_of_at_next();
+    set_necessary_experience();
     if (FLG_LIMIT_VALUE_CORRECTION) {
       set_current_level(get_current_level());
       set_target_level(get_target_level());
