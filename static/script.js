@@ -70,13 +70,15 @@ var btns;
     return star_holder.value;
   };
   set_stars = star => {
-    //let elem = document.querySelector("[name=stars]#" + star);
-    //elem.click();
     star_holder.value = star;
     document.querySelectorAll("section.button .button-container button").forEach(e => {
       e.classList.add("test-bg-thin");
     });
     document.querySelector("section.button .button-container button[data-stars='" + star + "']").classList.remove("test-bg-thin");
+    if (FLG_LIMIT_VALUE_CORRECTION) {
+      set_current_level(get_current_level());
+      set_target_level(get_target_level());
+    }
   };
   get_current_level = () => {
     return parseInt(current_level.value);
