@@ -56,7 +56,7 @@ var btns;
   at_next = document.querySelector("[name=at-next]");
 
   // plane-text
-  necessary_experience = document.querySelector("div.necessary-experience-count");
+  necessary_experience = document.querySelector(".necessary-experience-count");
   
   // TEST: button <star>
   btns = document.querySelectorAll("section.button .button-container button");
