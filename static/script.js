@@ -58,8 +58,8 @@ var btns;
   // plane-text
   necessary_experience = document.querySelector(".necessary-experience-count");
   
-  // TEST: button <star>
-  btns = document.querySelectorAll("section.button .button-container button");
+  // star-buttons
+  btns = document.querySelectorAll("section.star-buttons .button-container button");
   btns.forEach(btn => {
     btn.addEventListener("click", () => { set_stars(btn.dataset["stars"]); });
   });
@@ -71,10 +71,10 @@ var btns;
   };
   set_stars = star => {
     star_holder.value = star;
-    document.querySelectorAll("section.button .button-container button").forEach(e => {
+    document.querySelectorAll("section.star-buttons .button-container button").forEach(e => {
       e.classList.add("test-bg-thin");
     });
-    document.querySelector("section.button .button-container button[data-stars='" + star + "']").classList.remove("test-bg-thin");
+    document.querySelector("section.star-buttons .button-container button[data-stars='" + star + "']").classList.remove("test-bg-thin");
     set_limit_of_min_level();
     set_limit_of_max_level();
     set_limit_of_at_next();
