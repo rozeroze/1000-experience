@@ -167,4 +167,16 @@ var btns;
   
   // necessary experience
   set_necessary_experience();
+  
+  //
+  current_level.addEventListener("change", () => {
+    set_limit_of_at_next();
+    set_necessary_experience();
+  });
+  target_level.addEventListener("change", () => {
+    set_necessary_experience();
+  });
+  at_next.addEventListener("change", () => {
+    set_necessary_experience();
+  });
 })()
