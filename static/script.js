@@ -60,6 +60,9 @@ var btns;
   
   // TEST: button <star>
   btns = document.querySelectorAll("section.button .button-container button");
+  btns.forEach(btn => {
+    btn.addEventListener("click", () => { set_stars(btn.dataset["stars"]); });
+  });
   //var b1 = document.querySelector("section.button .button-container button:nth-child(1)");
   //b1.addEventListener("click", e => {
   //  set_stars(e.dataset["stars"]);
