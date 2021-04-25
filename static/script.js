@@ -37,7 +37,7 @@ var set_limit_of_at_next;
 var set_necessary_experience;
 
 /*** test ***/
-var btns;
+var star_btns;
 
 (function () {
   // top-app-bar
@@ -59,9 +59,16 @@ var btns;
   necessary_experience = document.querySelector(".necessary-experience-count");
   
   // star-buttons
-  btns = document.querySelectorAll("section.star-buttons button");
-  btns.forEach(btn => {
+  star_btns = document.querySelectorAll("section.star-buttons button");
+  star_btns.forEach(btn => {
     btn.addEventListener("click", () => { set_stars(btn.dataset["stars"]); });
+  });
+  
+  // distribute-button
+  distribute_btn = document.querySelector("section.distribute button");
+  distribute_btn.addEventListener("click", () => {
+    // TODO: develop
+    alert("distribute!");
   });
 
   // getter-setter
