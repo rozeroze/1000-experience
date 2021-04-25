@@ -69,7 +69,8 @@ var distribute_btn;
   distribute_btn = document.querySelector("section.distribute button");
   distribute_btn.addEventListener("click", () => {
     // TODO: develop
-    alert("distribute!");
+    let necessary = parseInt(necessary_experience.innerText);
+    alert("distribute " + necessary);
   });
 
   // getter-setter
