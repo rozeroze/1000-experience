@@ -38,6 +38,7 @@ var set_necessary_experience;
 
 /*** test ***/
 var star_btns;
+var distribute_btn;
 
 (function () {
   // top-app-bar
