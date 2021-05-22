@@ -174,7 +174,7 @@ var distribute_btn;
   set_stars(INITIAL_STARS);
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
-  set_at_next(0);
+  set_at_next(9999);
   
   // set limit
   set_limit_of_min_level();
