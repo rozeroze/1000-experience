@@ -201,6 +201,7 @@ var distribute_btn;
     set_necessary_experience();
   });
   at_next.addEventListener("change", () => {
+    // TODO: limited max/min level
     if (FLG_MOVE_UP_AND_DOWN_LEVEL) {
       let _at_next = get_at_next();
       let _limit = get_limit_of_at_next_level();
