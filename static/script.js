@@ -188,6 +188,7 @@ var distribute_btn;
   //
   current_level.addEventListener("change", () => {
     set_limit_of_at_next();
+    set_at_next(9999);
     set_necessary_experience();
   });
   target_level.addEventListener("change", () => {
