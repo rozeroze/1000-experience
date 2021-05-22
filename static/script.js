@@ -205,7 +205,7 @@ var distribute_btn;
           set_at_next(9999);
           break;
         case _limit: // TODO: move down the level
-          alert("TODO: level down!");
+          console.log("TODO: level down!");
           break;
         default:
           break;
