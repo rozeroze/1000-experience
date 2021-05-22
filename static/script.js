@@ -163,7 +163,10 @@ var distribute_btn;
     let _star = get_stars();
     let _current = get_current_level();
     let _target = get_target_level();
+    let _at_next = get_at_next();
+    let _limit = get_limit_of_at_next_level();
     let _exp = exp[_star][_target] - exp[_star][_current];
+    _exp -= (_limit - _at_next);
     necessary_experience.innerText = _exp;
   };
 
