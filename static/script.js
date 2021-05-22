@@ -159,7 +159,12 @@ var distribute_btn;
   };
   set_limit_of_at_next = () => {
     at_next.min = 0;
-    at_next.max = get_limit_of_at_next_level();
+    let _limit = get_limit_of_at_next_level();
+    if (FLG_MOVE_UP_AND_DOWN_LEVEL) {
+      at_next.max = _limit + 1;
+    } else {
+      at_next.max = _limit;
+    }
   };
   set_necessary_experience = () => {
     let _star = get_stars();
@@ -204,7 +209,7 @@ var distribute_btn;
           set_current_level(get_current_level() + 1);
           set_at_next(9999);
           break;
-        case _limit: // TODO: move down the level
+        case _limit + 1: // TODO: move down the level
           console.log("TODO: level down!");
           break;
         default:
