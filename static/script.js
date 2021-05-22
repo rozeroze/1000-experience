@@ -87,11 +87,12 @@ var distribute_btn;
     set_limit_of_min_level();
     set_limit_of_max_level();
     set_limit_of_at_next();
-    set_necessary_experience();
     if (FLG_LIMIT_VALUE_CORRECTION) {
       set_current_level(get_current_level());
       set_target_level(get_target_level());
+      set_at_next(9999);
     }
+    set_necessary_experience();
   };
   get_current_level = () => {
     return parseInt(current_level.value);
