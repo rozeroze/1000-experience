@@ -209,8 +209,9 @@ var distribute_btn;
           set_current_level(get_current_level() + 1);
           set_at_next(9999);
           break;
-        case _limit + 1: // TODO: move down the level
-          console.log("TODO: level down!");
+        case _limit + 1: // move down the level
+          set_current_level(get_current_level() - 1);
+          set_at_next(1);
           break;
         default:
           break;
