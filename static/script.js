@@ -3,6 +3,7 @@ const INITIAL_STARS = "star-3";
 const INITIAL_CURRENT_LEVEL = 1;
 const INITIAL_TARGET_LEVEL = 99;
 const FLG_LIMIT_VALUE_CORRECTION = true;
+const FLG_MOVE_UP_AND_DOWN_LEVEL = true;
 const MAX_LEVELS = {
   "star-1": 30,
   "star-2": 40,
@@ -195,6 +196,20 @@ var distribute_btn;
     set_necessary_experience();
   });
   at_next.addEventListener("change", () => {
+    if (FLG_MOVE_UP_AND_DOWN_LEVEL) {
+      let _at_next = get_at_next();
+      let _limit = get_limit_of_at_next_level();
+      switch (_at_next) {
+        case 0: // move up the level
+          set_current_level(get_current_level() + 1);
+          set_at_next(9999);
+          break;
+        case _limit: // TODO: move down the level
+          break;
+        default:
+          break;
+      }
+    }
     set_necessary_experience();
   });
 })()
