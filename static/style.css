@@ -17,6 +17,10 @@ a {
   margin: 10px;
 }
 
+.star-button-bg-thin {
+  background-color: #a0a0a0 !important;
+}
+
 .distribute-card {
   margin: 10px;
 }
