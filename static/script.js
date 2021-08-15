@@ -79,7 +79,8 @@ var distribute_btn;
     let necessary = parseInt(necessary_experience.innerText);
     //alert("distribute " + necessary);
     let distribute_field = document.querySelector("section.distribute .distribute-field");
-    distribute_field.innerText = necessary;
+    //distribute_field.innerText = necessary;
+    dialog.open();
   });
   
   // getter-setter
