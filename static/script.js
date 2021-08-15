@@ -57,6 +57,10 @@ var distribute_btn;
   current_level = document.querySelector("[name=current-level]");
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
+  
+  // dialog
+  const dialog = document.querySelector('.mdc-dialog');
+  mdc.dialog.MDCDialog.attachTo(dialog);
 
   // plane-text
   necessary_experience = document.querySelector(".necessary-experience-count");
@@ -76,7 +80,7 @@ var distribute_btn;
     let distribute_field = document.querySelector("section.distribute .distribute-field");
     distribute_field.innerText = necessary;
   });
-
+  
   // getter-setter
   get_stars = () => {
     //return document.querySelector("[name=stars]:checked").id;
