@@ -4,6 +4,7 @@ const INITIAL_CURRENT_LEVEL = 1;
 const INITIAL_TARGET_LEVEL = 99;
 const FLG_LIMIT_VALUE_CORRECTION = true;
 const FLG_MOVE_UP_AND_DOWN_LEVEL = true;
+const FLG_SET_MAX_LEVEL_WHEN_CHANGE_STAR = true;
 const MAX_LEVELS = {
   "star-1": 30,
   "star-2": 40,
@@ -88,6 +89,9 @@ var distribute_btn;
     set_limit_of_min_level();
     set_limit_of_max_level();
     set_limit_of_at_next();
+    if (FLG_SET_MAX_LEVEL_WHEN_CHANGE_STAR) {
+      set_target_level(MAX_LEVELS[star]);
+    }
     if (FLG_LIMIT_VALUE_CORRECTION) {
       set_current_level(get_current_level());
       set_target_level(get_target_level());
