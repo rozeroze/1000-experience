@@ -21,7 +21,7 @@ a {
   margin: 10px;
 }
 .distribute-card .distribute-card__item::before {
-  content: data(distribute-card-value);
+  content: attr(data-distribute-card-value);
 }
 
 input[name=current-level],
