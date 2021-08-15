@@ -89,9 +89,9 @@ var distribute_btn;
   set_stars = star => {
     star_holder.value = star;
     document.querySelectorAll("section.star-buttons button").forEach(e => {
-      e.classList.add("test-bg-thin");
+      e.classList.add("star-button-bg-thin");
     });
-    document.querySelector("section.star-buttons button[data-stars='" + star + "']").classList.remove("test-bg-thin");
+    document.querySelector("section.star-buttons button[data-stars='" + star + "']").classList.remove("star-button-bg-thin");
     set_limit_of_min_level();
     set_limit_of_max_level();
     set_limit_of_at_next();
