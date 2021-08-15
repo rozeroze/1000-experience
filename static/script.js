@@ -58,10 +58,10 @@ var distribute_btn;
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
   
-  // TODO: dialog
+  // dialog
   //const dialog = document.querySelector('.mdc-dialog');
   //mdc.dialog.MDCDialog.attachTo(dialog);
-  //const dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
+  const dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
 
   // plane-text
   necessary_experience = document.querySelector(".necessary-experience-count");
