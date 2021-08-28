@@ -85,7 +85,21 @@ var distribute_btn;
   distribute_card_btns.forEach(btn => {
     btn.addEventListener("click", evt => {
       // TODO: test
-      console.log("click distribute-card__button " + btn.dataset["distributeCardButtonType"]);
+      let type = btn.dataset["distributeCardButtonType"];
+      let item = btn.parentElement.getElementsByClassName("distribute-card__item")[0];
+      console.log("click distribute-card__button " + type);
+      item.dataset["distributeCardQuantity"];
+      switch (type) {
+        "add":
+          item.dataset["distributeCardQuantity"] = item.dataset["distributeCardQuantity"] + 1;
+          break;
+        "remove":
+          item.dataset["distributeCardQuantity"] = item.dataset["distributeCardQuantity"] - 1;
+          break;
+        default:
+          alert("error: distribute-card-button-type");
+          break;
+      }
     });
   });
   
