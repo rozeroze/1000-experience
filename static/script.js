@@ -87,13 +87,15 @@ var distribute_btn;
       // TODO: test
       let type = btn.dataset["distributeCardButtonType"];
       let item = btn.parentElement.getElementsByClassName("distribute-card__item")[0];
-      console.log("click distribute-card__button " + type);
+      let quantity = parseInt(item.dataset["distributeCardQuantity"]);
       switch (type) {
         case "add":
-          item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) + 1;
+          item.dataset["distributeCardQuantity"] = quantity + 1;
           break;
         case "remove":
-          item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) - 1;
+          if (quantity > 0) {
+            item.dataset["distributeCardQuantity"] = quantity - 1;
+          }
           break;
         default:
           alert("error: distribute-card-button-type");
