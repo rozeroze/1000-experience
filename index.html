@@ -203,10 +203,21 @@
                         <button class="mdc-icon-button material-icons mdc-dialog__close" data-mdc-dialog-action="close">close</button>
                       </div>
                       <div class="mdc-dialog__content" id="distribute-dialog-content">
-                        <span>distribute content</span>
-                        <!-- TEST: card -->
+                        <!-- card: 2000 -->
                         <div class="mdc-card distribute-card">
                           <div class="distribute-card__item" data-distribute-card-value="2000" data-distribute-card-quantity="0">2000</div>
+                          <button class="mdc-icon-button material-icons distribute-card__button" data-distribute-card-button-type="add">
+                            <div class="mdc-icon-button__ripple"></div>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+                          </button>
+                          <button class="mdc-icon-button material-icons distribute-card__button" data-distribute-card-button-type="remove">
+                            <div class="mdc-icon-button__ripple"></div>
+                            <i class="material-icons mdc-button__icon" aria-hidden="true">remove</i>
+                          </button>
+                        </div>
+                        <!-- card: 5000 -->
+                        <div class="mdc-card distribute-card">
+                          <div class="distribute-card__item" data-distribute-card-value="5000" data-distribute-card-quantity="0">5000</div>
                           <button class="mdc-icon-button material-icons distribute-card__button" data-distribute-card-button-type="add">
                             <div class="mdc-icon-button__ripple"></div>
                             <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
