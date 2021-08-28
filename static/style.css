@@ -24,7 +24,7 @@ a {
 .distribute-card {
   margin: 10px;
 }
-.distribute-card .distribute-card__item::after {
+.distribute-card .distribute-card__item::before {
   content: attr(data-distribute-card-value);
 }
 
