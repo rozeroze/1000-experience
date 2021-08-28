@@ -22,11 +22,17 @@ a {
 }
 
 .distribute-card {
-  margin: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
 }
-.distribute-card .distribute-card__item { }
+.distribute-card .distribute-card__item {
+  align-self: center;
+  width: 100%;
+}
+.distribute-card .distribute-card__item::after {
+  content: attr(data-distribute-card-quantity);
+}
 
 input[name=current-level],
 input[name=target-level],
