@@ -24,9 +24,7 @@ a {
 .distribute-card {
   margin: 10px;
 }
-.distribute-card .distribute-card__item::before {
-  content: attr(data-distribute-card-value);
-}
+.distribute-card .distribute-card__item { }
 
 input[name=current-level],
 input[name=target-level],
