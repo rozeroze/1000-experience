@@ -87,7 +87,8 @@ var distribute_btn;
       // TODO: test
       console.log(evt);
       console.log(evt.target);
-      console.log("click distribute-card__button" + evt.target.dataset["distribute-card-button-type"]);
+      // dataset: -(ハイフン)はcamelCaseに変更される
+      console.log("click distribute-card__button" + evt.target.dataset["distributeCardButtonType"]);
     });
   });
   
