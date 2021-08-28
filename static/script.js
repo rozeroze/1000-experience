@@ -85,10 +85,7 @@ var distribute_btn;
   distribute_card_btns.forEach(btn => {
     btn.addEventListener("click", evt => {
       // TODO: test
-      console.log("this", this);
-      console.log("btn", btn);
-      console.log("evt.target", evt.target);
-      console.log("click distribute-card__button " + evt.target.dataset["distributeCardButtonType"]);
+      console.log("click distribute-card__button " + btn.dataset["distributeCardButtonType"]);
     });
   });
   
