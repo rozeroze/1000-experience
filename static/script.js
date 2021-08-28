@@ -88,7 +88,6 @@ var distribute_btn;
       let type = btn.dataset["distributeCardButtonType"];
       let item = btn.parentElement.getElementsByClassName("distribute-card__item")[0];
       console.log("click distribute-card__button " + type);
-      item.dataset["distributeCardQuantity"];
       switch (type) {
         "add":
           item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) + 1;
