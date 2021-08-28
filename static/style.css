@@ -31,7 +31,7 @@ a {
   width: 100%;
 }
 .distribute-card .distribute-card__item::after {
-  content: attr(data-distribute-card-quantity);
+  content: " × " attr(data-distribute-card-quantity);
 }
 
 input[name=current-level],
