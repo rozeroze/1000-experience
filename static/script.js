@@ -91,10 +91,10 @@ var distribute_btn;
       item.dataset["distributeCardQuantity"];
       switch (type) {
         "add":
-          item.dataset["distributeCardQuantity"] = item.dataset["distributeCardQuantity"] + 1;
+          item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) + 1;
           break;
         "remove":
-          item.dataset["distributeCardQuantity"] = item.dataset["distributeCardQuantity"] - 1;
+          item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) - 1;
           break;
         default:
           alert("error: distribute-card-button-type");
