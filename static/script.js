@@ -89,10 +89,10 @@ var distribute_btn;
       let item = btn.parentElement.getElementsByClassName("distribute-card__item")[0];
       console.log("click distribute-card__button " + type);
       switch (type) {
-        "add":
+        case "add":
           item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) + 1;
           break;
-        "remove":
+        case "remove":
           item.dataset["distributeCardQuantity"] = parseInt(item.dataset["distributeCardQuantity"]) - 1;
           break;
         default:
