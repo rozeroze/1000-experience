@@ -71,14 +71,22 @@ var distribute_btn;
   star_btns.forEach(btn => {
     btn.addEventListener("click", () => { set_stars(btn.dataset["stars"]); });
   });
-  
+
   // distribute-button
-  distribute_btn = document.querySelector("section.distribute button");
+  distribute_btn = document.querySelector("section.distribute .distribute-button");
   distribute_btn.addEventListener("click", () => {
-    // TODO: develop
     let necessary = parseInt(necessary_experience.innerText);
     let distribute_field = document.querySelector("section.distribute .distribute-field");
     dialog.open();
+  });
+  
+  // distribute-card buttons
+  distribute_card_btns = document.querySelectorAll("section.distribute .distribute-card__button");
+  distribute_card_btns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // TODO: test
+      alert("click distribute-card__button");
+    });
   });
   
   // getter-setter
