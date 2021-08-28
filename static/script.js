@@ -85,10 +85,7 @@ var distribute_btn;
   distribute_card_btns.forEach(btn => {
     btn.addEventListener("click", evt => {
       // TODO: test
-      console.log(evt);
-      console.log(evt.target);
-      // dataset: -(ハイフン)はcamelCaseに変更される
-      console.log("click distribute-card__button" + evt.target.dataset["distributeCardButtonType"]);
+      console.log("click distribute-card__button " + evt.target.dataset["distributeCardButtonType"]);
     });
   });
   
