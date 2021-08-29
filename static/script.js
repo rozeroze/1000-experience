@@ -37,10 +37,14 @@ var set_limit_of_min_level;
 var set_limit_of_max_level;
 var set_limit_of_at_next;
 var set_necessary_experience;
+var set_distribute_total_count;
 
 /*** test ***/
 var star_btns;
 var distribute_btn;
+var distribute_cards;
+var distribute_card_btns;
+var distribute_total_count;
 
 (function () {
   // top-app-bar
@@ -80,6 +84,9 @@ var distribute_btn;
     dialog.open();
   });
   
+  // distribute-card
+  distribute_cards = document.querySelectorAll("section.distribute .distribute-card");
+  
   // distribute-card buttons
   distribute_card_btns = document.querySelectorAll("section.distribute .distribute-card__button");
   distribute_card_btns.forEach(btn => {
@@ -103,6 +110,9 @@ var distribute_btn;
       }
     });
   });
+  
+  // distribute-total-count
+  distribute_total_count = document.querySelector("section.distribute .distribute-total-count");
   
   // getter-setter
   get_stars = () => {
@@ -208,6 +218,16 @@ var distribute_btn;
     let _exp = exp[_star][_target] - exp[_star][_current];
     _exp -= (_limit - _at_next);
     necessary_experience.innerText = _exp;
+  };
+  set_distribute_total_count = () => {
+    let quantity = 0;
+    distribute_cards.forEach(card => {
+      let item = card.getElementsByClassName("distribute-card__item")[0]
+      let item_value = parseInt(item.dataset["distributeCardValue"]);
+      let item_quantity = parseInt(item.dataset["distributeCardQuantity"]);
+      quantity += item_value * item_quantity;
+    });
+    distribute_total_count.innerText = quantity;
   };
 
   // initial-setting
