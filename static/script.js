@@ -20,6 +20,7 @@ var current_level;
 var target_level;
 var at_next;
 var necessary_experience;
+var necessary_experience_on_distribute;
 
 /*** getter and setter ***/
 var get_stars;
@@ -61,15 +62,16 @@ var distribute_total_count;
   current_level = document.querySelector("[name=current-level]");
   target_level = document.querySelector("[name=target-level]");
   at_next = document.querySelector("[name=at-next]");
-  
+
   // dialog
   //const dialog = document.querySelector('.mdc-dialog');
   //mdc.dialog.MDCDialog.attachTo(dialog);
   const dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
 
-  // plane-text
-  necessary_experience = document.querySelector(".necessary-experience-count");
-  
+  // necessary-experience
+  necessary_experience = document.querySelector("section.necessary-experience .necessary-experience-count");
+  necessary_experience_on_distribute = document.querySelector("section.distribute .necessary-experience-count");
+
   // star-buttons
   star_btns = document.querySelectorAll("section.star-buttons button");
   star_btns.forEach(btn => {
