@@ -220,6 +220,7 @@ var distribute_total_count;
     let _exp = exp[_star][_target] - exp[_star][_current];
     _exp -= (_limit - _at_next);
     necessary_experience.innerText = _exp;
+    necessary_experience_on_distribute.innerText = _exp;
   };
   set_distribute_total_count = () => {
     let quantity = 0;
