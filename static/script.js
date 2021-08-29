@@ -91,7 +91,6 @@ var distribute_total_count;
   distribute_card_btns = document.querySelectorAll("section.distribute .distribute-card__button");
   distribute_card_btns.forEach(btn => {
     btn.addEventListener("click", evt => {
-      // TODO: test
       let type = btn.dataset["distributeCardButtonType"];
       let item = btn.parentElement.getElementsByClassName("distribute-card__item")[0];
       let quantity = parseInt(item.dataset["distributeCardQuantity"]);
@@ -108,6 +107,7 @@ var distribute_total_count;
           alert("error: distribute-card-button-type");
           break;
       }
+      set_distribute_total_count();
     });
   });
   
