@@ -82,8 +82,9 @@ var distribute_total_count;
   // distribute-button
   distribute_btn = document.querySelector("section.distribute .distribute-button");
   distribute_btn.addEventListener("click", () => {
-    let necessary = parseInt(necessary_experience.innerText);
-    let distribute_field = document.querySelector("section.distribute .distribute-field");
+    //let necessary = parseInt(necessary_experience.innerText);
+    //let distribute_field = document.querySelector("section.distribute .distribute-field");
+    distribute_reset_count.dispatchEvent(new Event("click"));
     dialog.open();
   });
   
