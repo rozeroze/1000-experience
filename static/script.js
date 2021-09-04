@@ -117,8 +117,11 @@ var distribute_total_count;
   // distribute-reset-count
   distribute_reset_count = document.querySelector("section.distribute .distribute-reset-count__button");
   distribute_reset_count.addEventListener("click", () => {
-    // TODO: test
-    console.log("distribute-reset-count");
+    distribute_cards.forEach(card => {
+      let item = card.querySelector(".distribute-card__item");
+      item.dataset["distributeCardQuantity"] = 0;
+    });
+    set_distribute_total_count();
   });
 
   // distribute-total-count
