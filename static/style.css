@@ -23,6 +23,14 @@ section.star-buttons .star-button-bg-thin {
 }
 
 /*** distribute ***/
+section.distribute .mdc-dialog .mdc-dialog__header { }
+section.distribute .mdc-dialog .mdc-dialog__content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+section.distribute .mdc-dialog .mdc-dialog__footer {
+  padding: 9px 24px 0;
+}
 section.distribute .distribute-card {
   margin: 10px 0;
   padding: 10px;
