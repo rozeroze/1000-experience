@@ -39,6 +39,8 @@ var set_limit_of_max_level;
 var set_limit_of_at_next;
 var set_necessary_experience;
 var set_distribute_total_count;
+var clear_distribute_card_quantity;
+var toggle_distribute_card_enable;
 
 /*** test ***/
 var star_btns;
@@ -117,13 +119,7 @@ var distribute_total_count;
 
   // distribute-reset-count
   distribute_reset_count = document.querySelector("section.distribute .distribute-reset-count__button");
-  distribute_reset_count.addEventListener("click", () => {
-    distribute_cards.forEach(card => {
-      let item = card.querySelector(".distribute-card__item");
-      item.dataset["distributeCardQuantity"] = 0;
-    });
-    set_distribute_total_count();
-  });
+  distribute_reset_count.addEventListener("click", clear_distribute_card_quantity);
 
   // distribute-total-count
   distribute_total_count = document.querySelector("section.distribute .distribute-total-count");
@@ -243,6 +239,16 @@ var distribute_total_count;
       quantity += item_value * item_quantity;
     });
     distribute_total_count.innerText = quantity;
+  };
+  clear_distribute_card_quantity = () => {
+    distribute_cards.forEach(card => {
+      let item = card.querySelector(".distribute-card__item");
+      item.dataset["distributeCardQuantity"] = 0;
+    });
+    set_distribute_total_count();
+  };
+  toggle_distribute_card_enable = () => {
+    // TODO: test
   };
 
   // initial-setting
