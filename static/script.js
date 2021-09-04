@@ -249,6 +249,18 @@ var distribute_total_count;
   };
   toggle_distribute_card_enable = () => {
     // TODO: test
+    let _star = get_stars();
+    distribute_cards.forEach(card => {
+      if (card.hasAttribute("data-distribute-card-star-limit")) {
+        if (_star === card.getAttribute("data-distribute-card-star-limit")) {
+          // enable
+          card.style.display = ""; // flex
+        } else {
+          // disable (invisible)
+          card.style.display = "none";
+        }
+      }
+    });
   };
 
   // initial-setting
