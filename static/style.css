@@ -17,27 +17,29 @@ a {
   margin: 10px;
 }
 
-.star-button-bg-thin {
+/*** star-buttons ***/
+section.star-buttons .star-button-bg-thin {
   background-color: #a0a0a0 !important;
 }
 
-.distribute-card {
+/*** distribute ***/
+section.distribute .distribute-card {
   margin: 10px 0;
   padding: 10px;
   display: flex;
   flex-direction: row;
 }
-.distribute-card .distribute-card__item {
+section.distribute .distribute-card .distribute-card__item {
   align-self: center;
   width: 100%;
 }
-.distribute-card .distribute-card__item::after {
+section.distribute .distribute-card .distribute-card__item::after {
   content: " × " attr(data-distribute-card-quantity);
 }
-.distribute-reset-count {
+section.distribute .distribute-reset-count {
   padding: 10px;
 }
-.distribute-reset-count__button {
+section.distribute .distribute-reset-count__button {
   display: block;
   margin: 0 auto;
 }
