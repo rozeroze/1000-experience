@@ -118,7 +118,9 @@ var distribute_total_count;
 
   // distribute-reset-count
   distribute_reset_count = document.querySelector("section.distribute .distribute-reset-count__button");
-  distribute_reset_count.addEventListener("click", () => { clear_distribute_card_quantity(); });
+  distribute_reset_count.addEventListener("click", () => {
+    clear_distribute_card_quantity();
+  });
 
   // distribute-total-count
   distribute_total_count = document.querySelector("section.distribute .distribute-total-count");
