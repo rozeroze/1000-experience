@@ -84,9 +84,8 @@ var distribute_total_count;
   // distribute-button
   distribute_btn = document.querySelector("section.distribute .distribute-button");
   distribute_btn.addEventListener("click", () => {
-    //let necessary = parseInt(necessary_experience.innerText);
-    //let distribute_field = document.querySelector("section.distribute .distribute-field");
-    distribute_reset_count.dispatchEvent(new Event("click"));
+    clear_distribute_card_quantity();
+    toggle_distribute_card_enable();
     dialog.open();
   });
   
@@ -254,7 +253,7 @@ var distribute_total_count;
       if (card.hasAttribute("data-distribute-card-star-limit")) {
         if (_star === card.getAttribute("data-distribute-card-star-limit")) {
           // enable
-          card.style.display = ""; // flex
+          card.style.display = ""; // empty: 'display: flex' is setting by css
         } else {
           // disable (invisible)
           card.style.display = "none";
