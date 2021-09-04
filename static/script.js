@@ -45,6 +45,7 @@ var star_btns;
 var distribute_btn;
 var distribute_cards;
 var distribute_card_btns;
+var distribute_reset_count;
 var distribute_total_count;
 
 (function () {
@@ -112,10 +113,17 @@ var distribute_total_count;
       set_distribute_total_count();
     });
   });
-  
+
+  // distribute-reset-count
+  distribute_reset_count = document.querySelector("section.distribute .distribute-reset-count__button");
+  distribute_reset_count.addEventListener("click", () => {
+    // TODO: test
+    console.log("distribute-reset-count");
+  });
+
   // distribute-total-count
   distribute_total_count = document.querySelector("section.distribute .distribute-total-count");
-  
+
   // getter-setter
   get_stars = () => {
     //return document.querySelector("[name=stars]:checked").id;
