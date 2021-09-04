@@ -51,6 +51,9 @@ section.distribute .distribute-reset-count__button {
   display: block;
   margin: 0 auto;
 }
+section.distribute .distribute-necessary-and-total {
+  padding: 5px;
+}
 
 input[name=current-level],
 input[name=target-level],
@@ -58,6 +61,7 @@ input[name=at-next] {
   width: 200px;
 }
 
+/*** @media ***/
 @media (max-width: 600px) and (max-height: 960px) {
   .mdc-dialog.mdc-dialog--fullscreen .mdc-dialog__surface .mdc-dialog__footer {
     padding: 9px 16px 0;
