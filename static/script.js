@@ -88,10 +88,10 @@ var distribute_total_count;
     toggle_distribute_card_enable();
     dialog.open();
   });
-  
+
   // distribute-card
   distribute_cards = document.querySelectorAll("section.distribute .distribute-card");
-  
+
   // distribute-card buttons
   distribute_card_btns = document.querySelectorAll("section.distribute .distribute-card__button");
   distribute_card_btns.forEach(btn => {
@@ -268,15 +268,15 @@ var distribute_total_count;
   set_current_level(INITIAL_CURRENT_LEVEL);
   set_target_level(INITIAL_TARGET_LEVEL);
   set_at_next(9999);
-  
+
   // set limit
   set_limit_of_min_level();
   set_limit_of_max_level();
   set_limit_of_at_next();
-  
+
   // necessary experience
   set_necessary_experience();
-  
+
   //
   current_level.addEventListener("change", () => {
     set_limit_of_at_next();
