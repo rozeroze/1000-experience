@@ -21,6 +21,9 @@ footer {
   width: 100vw;
   border-top: 1px solid lightgray;
 }
+footer .copyright-icon { font-size: 1em; }
+footer .copyright-data { }
+footer .copyright-author { }
 
 .button-container {
   margin: 10px;
