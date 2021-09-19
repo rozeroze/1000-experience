@@ -13,6 +13,14 @@ a {
   text-decoration: none;
 }
 
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  width: 100vw;
+}
+
 .button-container {
   margin: 10px;
 }
