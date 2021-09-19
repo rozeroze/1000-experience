@@ -38,6 +38,13 @@ section.star-buttons .star-button-bg-thin {
   background-color: #a0a0a0 !important;
 }
 
+/*** section-level ***/
+section.section-level input[name=current-level],
+section.section-level input[name=target-level],
+section.section-level input[name=at-next] {
+  width: 200px;
+}
+
 /*** distribute ***/
 section.distribute .mdc-dialog .mdc-dialog__header { }
 section.distribute .mdc-dialog .mdc-dialog__content {
@@ -73,12 +80,6 @@ section.distribute .distribute-reset-count__button {
 }
 section.distribute .distribute-necessary-and-total {
   padding: 5px;
-}
-
-input[name=current-level],
-input[name=target-level],
-input[name=at-next] {
-  width: 200px;
 }
 
 /*** @media ***/
