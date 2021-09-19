@@ -37,6 +37,9 @@ section.distribute .distribute-card {
   display: flex;
   flex-direction: row;
 }
+section.distribute .distribute-card[data-distribute-card-star-limit]::after {
+  content: attr(data-distribute-card-star-limit);
+}
 section.distribute .distribute-card .distribute-card__item {
   align-self: center;
   width: 100%;
