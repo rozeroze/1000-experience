@@ -62,9 +62,9 @@ var distribute_total_count;
     mdc.textField.MDCTextField.attachTo(textField);
   }
   star_holder = document.querySelector("#star-holder");
-  current_level = document.querySelector("[name=current-level]");
-  target_level = document.querySelector("[name=target-level]");
-  at_next = document.querySelector("[name=at-next]");
+  current_level = document.querySelector("section.level [name=current-level]");
+  target_level = document.querySelector("section.level [name=target-level]");
+  at_next = document.querySelector("section.level [name=at-next]");
 
   // dialog
   //const dialog = document.querySelector('.mdc-dialog');
