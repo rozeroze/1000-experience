@@ -39,6 +39,7 @@ section.distribute .distribute-card {
 }
 section.distribute .distribute-card[data-distribute-card-star-limit]::after {
   content: attr(data-distribute-card-star-limit);
+  color: gray;
 }
 section.distribute .distribute-card .distribute-card__item {
   align-self: center;
