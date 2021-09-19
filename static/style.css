@@ -29,10 +29,6 @@ footer .copyright-icon {
 footer .copyright-data { line-height: 1.5em; font-size: 1em; }
 footer .copyright-author { line-height: 1.5em; font-size: 1em; }
 
-.button-container {
-  margin: 10px;
-}
-
 /*** star-buttons ***/
 section.star-buttons .star-button-bg-thin {
   background-color: #a0a0a0 !important;
