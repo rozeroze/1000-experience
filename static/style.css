@@ -24,10 +24,10 @@ footer {
 footer .copyright-icon {
   position: relative;
   transform: translateY(8%);
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
-footer .copyright-data { }
-footer .copyright-author { }
+footer .copyright-data { line-height: 1.5em; font-size: 1em; }
+footer .copyright-author { line-height: 1.5em; font-size: 1em; }
 
 .button-container {
   margin: 10px;
