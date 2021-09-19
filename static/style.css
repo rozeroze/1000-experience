@@ -26,8 +26,8 @@ footer {
 }
 footer .copyright-icon {
   position: relative;
-  transform: translateY(8%);
-  font-size: 0.95em;
+  transform: translateY(12%);
+  font-size: 1em;
 }
 footer .copyright-data { line-height: 1.5em; font-size: 1em; }
 footer .copyright-author { line-height: 1.5em; font-size: 1em; }
