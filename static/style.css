@@ -39,9 +39,9 @@ section.star-buttons .star-button-bg-thin {
 }
 
 /*** section-level ***/
-section.section-level input[name=current-level],
-section.section-level input[name=target-level],
-section.section-level input[name=at-next] {
+section.level input[name=current-level],
+section.level input[name=target-level],
+section.level input[name=at-next] {
   width: 200px;
 }
 
